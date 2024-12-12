@@ -13,7 +13,7 @@ const UploadPage = () => {
     
     const handleFileChange = (e) => 
     {
-            setResumeFile(e.target.files[0])
+            setResumeFile(e.target.files[0]);
     }
 
   return (
