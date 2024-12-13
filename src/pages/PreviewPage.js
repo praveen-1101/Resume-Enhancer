@@ -8,7 +8,7 @@ function PreviewPage() {
         </h2>
         <p className='mt-4'>Your updated resume will be displayed here .</p>
         <iframe
-        src=""
+        src="/path/to/preview"
         className='mt-4 w-full h-96 border rounded-md'
         title="Resume Preview"
         >

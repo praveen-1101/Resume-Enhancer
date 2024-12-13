@@ -4,10 +4,21 @@ const UploadPage = () => {
     const [jobDescription, setJobDescription] = useState('');
     const [resumeFile, setResumeFile] = useState(null);
 
-    const handleSubmit = () => 
+    const handleSubmit = async () => 
     {
+
+        const formData = new FormData();
+        formData.append('jobDescription', jobDescription);
+        formData.append('resume', resumeFile);
+
+        await fetch('http://localhost:5000/upload', {
+            method: 'POST',
+            body: formData,
+        });
+
         console.log('Job Description: ', jobDescription);
         console.log('Resume File: ', resumeFile);
+        
         //Logic for file uploading an processing the resume will go here
     }
     
